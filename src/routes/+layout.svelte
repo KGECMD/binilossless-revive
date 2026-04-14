@@ -1,6 +1,9 @@
 <script lang="ts">
 	import { fetchApiTargets } from '$lib/config';
 	import { onMount } from 'svelte';
+	import { injectSpeedInsights } from '@vercel/speed-insights/sveltekit';
+
+	injectSpeedInsights();
 
 	onMount(() => {
 		fetchApiTargets();
